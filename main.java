@@ -1,24 +1,34 @@
+package weekend3_2;
 
 public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ArrList<String> s = new ArrList<String>();
-		s.insertLast("apple");	s.print();	 s.insertLast("orange"); s.print();
-		s.insertLast("cherry");	s.print();	 s.insertLast("pear"); s.print();
-		s.insert("grape",1);	s.print(); 	 s.insert("lemon",4);	s.print();
-		s.insertLast("kiwi");	s.print();
-		s.delete(4); s.print();	s.delete(0); s.print();
-		s.delete(0); s.print();	s.delete(3); s.print();
-		s.delete(0); s.print();
 		
-		System.out.println("1번째 항목은 "+s.peek(1)+"이다."); System.out.println();
+		SList<String> s = new SList<String>();
+		s.insertFront("orange"); s.insertFront("apple");
+		s.insertAfter("cherry", s.head.getNext());
+		s.insertFront("pear");
 		
-		ArrList<Integer> t = new ArrList<Integer>0;
-		t.insertLast(100);	t.insertLast(200); t.insertLast(300); t.insertLast(400); t.print();
-		t.insert(350,3);	t.print();
-		t.insert(250,2);	t.print();
-		t.insertLast(500);	t.print();
+		s.print();
+		System.out.println(": s의 길이= "+s.size()+"\n");
+		System.out.println("체리가 \t"+s.search("cherry")+"번째에 있다.");
+		System.out.println("키위가 \t"+s.search("kiwi")+"번째에 있다.\n");
+		s.deleteAfter(s.head);
+		s.print();
+		System.out.println(": s의 길이 = "+s.size());System.out.println();
+		s.deleteFront();
+		s.print();
+		System.out.println(": s의 길이 = "+s.size());System.out.println();
+		
+		SList<Integer> t = new SList<Integer>();
+		t.insertFront(500); t.insertFront(200);
+		t.insertAfter(400, t.head);
+		t.insertFront(100);
+		t.insertAfter(300, t.head.getNext());
+		t.print();
+		System.out.println(": t의 길이 = "+t.size());
+		
 	}
 
 }
