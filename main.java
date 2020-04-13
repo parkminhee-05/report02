@@ -1,21 +1,27 @@
-package Weekend3_3_2;
+package Weekend3_3;
 
 public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		CList<String> s = new CList<String>();
+		DList<String> s = new DList<String>();
 		
-		s.insert("pear"); s.insert("cherry");
-		s.insert("orange"); s.insert("apple");
-			s.print();
-			System.out.print(": s의 길이 = "+s.size()+"\n");
-			
-			s.delete();
-			s.print();
-			System.out.print(" :s의 길이 = "+s.size()); System.out.println();
-
+		s.insertAfter(s.head, "apple");
+		s.insertBefore(s.tail, "orange");
+		s.insertBefore(s.tail, "cherry");
+		s.insertAfter(s.head.getNext(),"pear");
+		s.print(); System.out.println()
+		
+		s.delete(s.tail.getPrevious());
+		s.print(); System.out.println();
+		
+		s.insertBefore(s.tail, "grape");
+		s.print(); System.out.println();
+		s.delete(s.head.getNext()); s.print();
+		s.delete(s.head.getNext()); s.print();
+		s.delete(s.head.getNext()); s.print();
+		s.delete(s.head.getNext()); s.print();	
 	}
 
 }
