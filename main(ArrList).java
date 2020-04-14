@@ -12,7 +12,7 @@ public class main {
 		s.delete(0); s.print();	s.delete(3); s.print();
 		s.delete(0); s.print();
 		
-		System.out.println("1��° �׸��� "+s.peek(1)+"�̴�."); System.out.println();
+		System.out.println("1¹øÂ° Ç×¸ñÀº "+s.peek(1)+"ÀÌ´Ù."); System.out.println();
 		
 		ArrList<Integer> t = new ArrList<Integer>();
 		t.insertLast(100);	t.insertLast(200); t.insertLast(300); t.insertLast(400); t.print();
