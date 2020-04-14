@@ -10,11 +10,11 @@ public class main {
 		s.insert("pear"); s.insert("cherry");
 		s.insert("orange"); s.insert("apple");
 			s.print();
-			System.out.print(": sÀÇ ±æÀÌ = "+s.size()+"\n");
+			System.out.print(": sÃ€Ã‡ Â±Ã¦Ã€ÃŒ = "+s.size()+"\n");
 			
 			s.delete();
 			s.print();
-			System.out.print(" :sÀÇ ±æÀÌ = "+s.size()); System.out.println();
+			System.out.print(" :sÃ€Ã‡ Â±Ã¦Ã€ÃŒ = "+s.size()); System.out.println();
 
 	}
 
