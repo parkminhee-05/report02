@@ -10,7 +10,7 @@ public class Node<E> {
 		item = newItem;
 		next = node;
 	}
-	//get �޼ҵ��� set �޼ҵ��
+	//get ¸Þ¼Òµåµé°ú set ¸Þ¼Òµåµé
 	public E getItem() {return item;}
 	public Node<E> getnext() {return next;}
 	public void setItem() {item = newItem;}
